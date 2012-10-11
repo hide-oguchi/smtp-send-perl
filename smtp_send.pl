@@ -41,6 +41,7 @@ close(INFILE);
 $port 	= getservbyname('smtp','tcp');
 $struct = sockaddr_in($port,inet_aton($server)); 
 socket(SH, PF_INET, SOCK_STREAM, 0) || die("sock faild $!") ; 
+setsockopt(SH, SOL_TCP, TCP_NODELAY,1);
 
 connect(SH, $struct ) || die("connect faild $!") ; 
 
