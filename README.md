@@ -1,4 +1,4 @@
 smtp-send-perl
 ==============
 
-SMTP send tool (perl)
+simple SMTP send tool (by perl)
